@@ -1,0 +1,6 @@
+Revision history for Perl extension CGI::Application::Plugin::Config::IniFiles.
+
+0.01  Wed Apr  4 09:47:55 2007
+	- original version; created by h2xs 1.23 with options
+		-n CGI::Application::Plugin::Config::IniFiles -AXc
+
