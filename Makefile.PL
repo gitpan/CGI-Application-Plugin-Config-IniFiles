@@ -5,7 +5,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME      => "CGI::Application::Plugin::Config::IniFiles",
-    VERSION   => "0.01",
+    VERSION   => "0.02",
     PREREQ_PM => { 'CGI::Application' => 4.06,
 		   'Config::IniFiles' => 2.38 },
     ABSTRACT  => "CGI::Application plugin for Config::IniFiles",
