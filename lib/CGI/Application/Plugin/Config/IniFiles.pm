@@ -12,7 +12,7 @@ use Config::IniFiles;
 
 use base "Exporter";
 
-our @EXPORT = qw( config_file config );
+our @EXPORT = qw( config_file config cfg );
 our $VERSION = (qw$Revision: $)[1];
 
 sub config_file {
@@ -29,6 +29,10 @@ sub config_file {
 }
 
 sub config {
+  return $_[0]->{'__CONFIG_INIFILES'}->{'__CONFIG'};
+}
+
+sub cfg {
   return $_[0]->{'__CONFIG_INIFILES'}->{'__CONFIG'};
 }
 
@@ -61,7 +65,7 @@ CGI::Application::Plugin::Config::IniFiles - Add Config::IniFiles support to CGI
 This module works as plugin for L<Config::IniFiles> to be easily used
 inside L<CGI::Application> module.
 
-Module provides two calls: C<config_file()> and C<config()>.
+Module provides tree calls: C<config_file()>, C<config()> and C<cfg()>.
 
 =head1 METHODS
 
@@ -78,6 +82,10 @@ which is useful for persistent environments like FastCGI.
 
 Returns underlying L<Config::IniFiles> object for direct access to its
 methods.
+
+=item C<config()>
+
+Same as C<config()> for more convenient.
 
 =back
 

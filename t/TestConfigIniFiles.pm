@@ -30,7 +30,7 @@ sub run_mode {
   my $title = $self->config->val("main","title");
   $out .= sprintf "title=\"%s\"\n",$title;
 
-  my @db = $self->config->GroupMembers("db");
+  my @db = $self->cfg->GroupMembers("db");
   $out .= sprintf "dbs=%s\n",join ",",map { (split "\\s+",$_,2)[1] } @db;
 
   return $out;
